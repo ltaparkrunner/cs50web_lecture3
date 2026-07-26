@@ -4,8 +4,8 @@
     <h1>Add a New Task</h1>
     <form action="{% url 'tasks:add' %}" method="post">
         {% csrf_token %}  <!-- ЭТОТ ТЕГ ИСПРАВИТ ОШИБКУ -->
-        <input type="text" name="task" placeholder="New Task">
-        <button type="submit">Add</button>
+        {{ form }}
+        <input type="submit">
     </form>
     <a href="{% url 'tasks:index' %}">View Tasks</a>
 {% endblock %}
